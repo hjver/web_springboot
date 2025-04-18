@@ -1,0 +1,37 @@
+# 빌드 폴더
+/target/
+/build/
+
+# IntelliJ / Eclipse / STS 관련 설정 파일들
+*.iml
+.classpath
+.project
+.settings/
+.idea/
+
+# 로그 파일
+*.log
+
+# 운영체제별 임시 파일들
+.DS_Store
+Thumbs.db
+
+# Maven의 로컬 저장소 (저장소 내 의존성 파일들)
+.m2/
+
+# 빌드 시 생성되는 jar, war 파일 등
+*.jar
+*.war
+
+# 환경설정 파일 (민감한 정보 포함할 수 있음)
+#*.env
+#*.properties
+#*.yml
+
+# 기타 운영체제/개발툴 임시 파일
+*.swp
+*.bak
+
+# Eclipse / STS 메타데이터
+.metadata/
+*.lock
