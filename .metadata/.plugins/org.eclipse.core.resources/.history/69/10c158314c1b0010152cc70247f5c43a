@@ -1,0 +1,27 @@
+package kr.co.khj.aop;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class main2_controller {
+	
+	Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	@GetMapping("/testapo.do")
+	public String testaop(Model m) {
+		
+		String mid = "hong";
+		String mname = "홍길동";
+		
+		if(mid.equals("hong")) {
+			this.log.info("아이디를 확인하였습니다.");
+		}
+		
+		m.addAttribute("mname", mname);
+		return null;
+	}
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf 서브 페이지</title>
+</head>
+<body>
+<header th:replace="~{sample.html :: top}">
+
+</header>
+<footer th:replace="~{sample.html :: copy}">
+
+</footer>
+</body>
+</html>

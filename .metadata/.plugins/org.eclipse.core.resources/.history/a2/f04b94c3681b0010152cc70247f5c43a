@@ -1,0 +1,6 @@
+#Thymeleaf 환경설정
+spring.thymeleaf.cache=false
+spring.thymeleaf.check-template-location=true
+spring.thymeleaf.enabled=true
+spring.thymeleaf.prefix==classpath:/templates/
+

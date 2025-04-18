@@ -1,0 +1,19 @@
+package kr.co.khj;
+
+import java.io.PrintWriter;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class main_controller {
+	PrintWriter pw = null;
+	
+	@GetMapping("/index.do")
+	public String index(Model m) {
+		String username="홍길동";
+		m.addAttribute("username", username);
+		return null;
+	}
+}

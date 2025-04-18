@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- xmlns:th : thymeleaf를 명시하는 속성값 JSTL,JSP를 사용하지 않음 -->
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf 서브 페이지</title>
+<!-- replace : ~{}(경로) 가져올 원본 html :: fragment이름 
+replace => 이페이지의 Tag를 불러오는 페이지의 Tag로 변경
+insert : replace와 동일한 가지고 있으며, 단 이페이지의 태그안에 불어오는 페이지의 태그가 추가됨
+-->
+<style th:replace="~{sample.html :: styles}"></style>
+</head>
+<body>
+<div th:checked="Y"></div>
+<div th:replace="~{sample.html :: top(${menu})}">
+
+</div>
+<!--  
+<div th:insert="~{sample.html :: top}">
+
+</div>
+-->
+<main>
+게시판 리스트 출력
+</main>
+<footer th:replace="~{sample.html :: copy(${copy})}">
+
+</footer>
+</body>
+</html>

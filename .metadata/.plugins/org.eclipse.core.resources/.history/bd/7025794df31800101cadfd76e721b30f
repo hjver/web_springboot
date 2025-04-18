@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bootstrap 회원가입 + Spring-boot</title>
+<link rel="stylesheet" href="./css/bootstrap.css">
+<script src="./js/bootstrap.js"></script>
+</head>
+<body>
+<form id="frm" method="post" action="./join.do">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">아이디</span>
+  <input type="text" class="form-control" placeholder="아이디를 입력하세요." aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+</form>
+</body>
+</html>

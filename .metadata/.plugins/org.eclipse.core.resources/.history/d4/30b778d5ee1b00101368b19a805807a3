@@ -1,0 +1,14 @@
+package kr.co.khj.thymeleaf;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class thymeleaf_controller {
+
+	@GetMapping("/sample.do")
+	public String sample() {
+		
+		return "sample";
+	}
+}

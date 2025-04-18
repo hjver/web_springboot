@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>파일 전송 FTP</title>
+</head>
+<body>
+<form id="frm" action="./cdn_fileok.do" enctype="multpart/form-data">
+<input type="hidden" name="url" value="kbsn.or.kr">
+파일첨부 : <input type="file" name="mfile"><br>
+<button type="button" id="btn">CDN 파일 업로드</button>
+</form>
+<script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+export class cdn_lists{
+	
+	cdn_listdel(){
+		//querySelector : 한 개의 오브젝트 값을 가져오는 역할
+		//querySelectorAll : 한개 이상의 같은 이름을 가지 오브젝트를 자뎌오는 역할
+		var count = 0;
+		var ob = document.querySelectorAll("#ls .ck");
+		console.log(ob);
+		var i = 0;
+		do{
+			if(ob[0].checked){
+				console.log(ob[i].checked);
+			}
+			i++;
+		}while(i < ob.length);
+
+		console.log("test");
+	}
+}

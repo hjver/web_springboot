@@ -1,0 +1,8 @@
+export class cdn_lists{
+	
+	cdn_listdel(){
+		var ob = document.querySelectorAll("#ls .ck");
+		consle.log(ob);
+		console.log("test");
+	}
+}

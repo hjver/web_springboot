@@ -1,0 +1,27 @@
+package aop;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class aop_exam{
+
+	public static void main(String[] args) {
+		
+		ex_interface proxy = (ex_interface)Proxy.newProxyInstance(ex_interface.class.getClassLoader(),
+				new Class[] {ex_interface.class},
+				new InvocationHandler() {
+					
+					@Override
+					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+						
+						//본코드에서 작동되고 있는 사항을 실행
+						Object result = method.invoke(exam, args);
+						
+						return null;
+					}
+				});
+		System.out.println();
+	}
+	
+}

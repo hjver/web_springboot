@@ -1,0 +1,9 @@
+package kr.co.khj;
+
+import lombok.Data;
+
+@Data
+public class membership_dto {
+	Integer MIDX,MCODE;
+	String MID,MNAME,MNICK,MPASS,MEMAIL,MHP,MDATE,MJOIN;
+}

@@ -1,0 +1,45 @@
+package kr.co.khj.aop;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@Aspect    //AOP
+@Component  //@Component : main2_aop 무조건 실행되도록 함
+public class main2_aop {
+
+	Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	@Resource(name="user_DTO")
+	user_DTO dto;
+	
+	//@Before : 해당 Controller가 작동 되기전 실행되는 AOP
+	//@After : 해당 Controller가 작동된후 실행되는 AOP
+	//execution : 해당 Controller 메소드 실행
+	
+	/*
+	@Before("execution(* kr.co.khj.aop.main2_controller.*(..))")
+	public void testao_b() {
+		this.log.info("aop Before에서 실행되는 로그임");
+	}
+	*/
+	
+	@After("execution(* kr.co.khj.aop.main2_controller.testaop(..))")
+	public void testao_a(HttpServletRequest req) {
+		try {
+			//this.log.info("aop After에서 실행되는 로그임");
+			HttpSession sc = req.getSession();
+			this.log.info(this.dto.getMid());
+			
+		}catch (Throwable e) { //Exception 보다 상위 Throwable 예외처리 부분
+			e.printStackTrace();
+		}
+	}
+}

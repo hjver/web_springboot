@@ -1,0 +1,25 @@
+# 빌드 디렉토리
+/target/
+/build/
+
+# IDE 설정 파일
+*.iml
+.idea/
+*.class
+*.log
+
+# 운영체제별 임시 파일
+.DS_Store
+Thumbs.db
+
+# 로그 파일
+*.log
+
+# 기타 바이너리
+*.exe
+*.dll
+*.jar
+
+# Eclipse / STS 메타데이터
+.metadata/
+*.lock

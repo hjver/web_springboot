@@ -1,0 +1,8 @@
+package kr.co.khj;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("cdn_model")
+public class cdn_model {
+	
+}

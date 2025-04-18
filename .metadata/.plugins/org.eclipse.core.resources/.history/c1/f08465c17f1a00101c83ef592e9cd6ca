@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.khj.cdn_mapper">
+
+<insert id="cdn_insert" parameterType="kr.co.khj.file_DTO">
+INSERT INTO API_IMG (ORI_FILE,NEW_FILE,API_FILE,FILE_URL,FILE_BIN,FILE_DATE)
+VALUES (#{ORI_FILE},#{NEW_FILE},#{API_FILE},#{FILE_URL},#{FILE_BIN},SYSDATE)
+</insert>
+<!-- mybatis 버전이 낮은 경우 : VALUES (#{ORI_FILE},#{NEW_FILE},#{API_FILE},#{FILE_URL},#{FILE_BIN, jdbcType=BLOB},SYSDATE) -->
+
+<select id="cdn_select" resultType="kr.co.khj.file_DTO" parameterType="Map">
+select AIDX,ORI_FILE,NEW_FILE,API_FILE,FILE_DATE from API_IMG 
+<if test="part==1">
+where AIDX = #{AIDX}
+</if>
+order by AIDX desc
+</select>
+
+<select id="cdn_image" resultType="kr.co.khj.file_DTO" parameterType="String">
+select FILE_URL from API_IMG where API_FILE=#{APINO}
+</select>
+
+</mapper>

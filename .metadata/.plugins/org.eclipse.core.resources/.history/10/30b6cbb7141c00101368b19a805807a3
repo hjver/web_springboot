@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{index.html :: head}">
+</head>
+<body>
+<header th:insert="~{index.html :: top}"></header>
+
+<nav th:insert="~{index.html :: manu}"></nav>
+</body>
+</html>

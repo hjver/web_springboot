@@ -1,0 +1,47 @@
+package kr.co.khj;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+//AOP를 적용할 클래스
+
+/*
+ * OOP : 객체 지향 프로그래밍
+ * AOP (Aspect-Oriented Programming) : 관점 지향 프로그래밍
+ * 
+ */
+
+public class java_aop {
+
+	public static void main(String[] args) {
+		
+		//AOP (Proxy) => newProxyInstance => 기존 메소드 + 신규코드 return
+		
+		examinterface ex = new exam();
+		//AOP 사용
+		examinterface aops = (examinterface)Proxy.newProxyInstance(examinterface.class.getClassLoader(), 
+				new Class[] {examinterface.class}, 
+				new InvocationHandler() {
+					
+					@Override
+					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+						//해당 본코드의 메소드를 실행시킨 결과값을 가져오는 역할
+						Object result = method.invoke(ex, args);
+						Object total2 = Integer.parseInt(result.toString()) + 100;
+						return total2;
+					}		
+		});
+		int result = ex.total();
+		System.out.println("본 코드에서 실행된 결과값 : " + result);
+		int result_aop = aops.total();
+		System.out.println("AOP에서 실행된 결과값 : " + result_aop);
+		
+		float result_aop2 = aops.avg();
+		System.out.println("AOP에서 실행된 결과값 : " + result_aop2);
+	}
+}

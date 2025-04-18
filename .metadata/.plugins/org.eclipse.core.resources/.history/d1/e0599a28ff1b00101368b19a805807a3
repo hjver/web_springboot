@@ -1,0 +1,30 @@
+package kr.co.khj.thymeleaf;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class thymeleaf_controller {
+
+	/*
+	 * 1. 기본 return null 사용시 => webapp
+	 * 2. return "aaa" => webapp aaa.jsp
+	 * 3. return "/aaa" => templates aaa.jsp
+	 * 4. return "/aaa.html" => templates aaa.html
+	 */
+	
+	@GetMapping("/sample2.do")
+	public String sample2() {
+		
+		return "/subpage.html";
+	}
+	
+	//Thymeleaf View에 Model로
+	@GetMapping("/sample.do")
+	public String sample(Model m) {
+		String product = "냉장고";
+		m.addAttribute("product", product);
+		return "/sample.html";
+	}
+}

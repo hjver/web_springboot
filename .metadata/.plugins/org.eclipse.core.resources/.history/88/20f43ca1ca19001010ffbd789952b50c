@@ -1,0 +1,12 @@
+package kr.co.khj;
+
+import org.springframework.stereotype.Service;
+
+import jakarta.annotation.Resource;
+
+@Service
+public class cdn_service {
+
+	@Resource()
+	
+}

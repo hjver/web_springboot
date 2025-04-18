@@ -1,0 +1,19 @@
+package kr.co.khj;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+/*
+ * OOP : 객체 지향 프로그래밍
+ * AOP (Aspect-Oriented Programming) : 관점 지향 프로그래밍
+ * 
+ */
+
+public class java_aop {
+
+	public static void main(String[] args) {
+
+	}
+
+}

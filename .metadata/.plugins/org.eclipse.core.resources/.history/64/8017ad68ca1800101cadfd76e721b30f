@@ -1,0 +1,5 @@
+package kr.co.khj;
+
+public interface mapper {
+
+}

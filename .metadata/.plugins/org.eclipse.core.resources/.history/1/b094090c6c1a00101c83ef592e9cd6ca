@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="../js/bootstrap.js?v=1"></script>
+</head>
+<body>
+<table class="table table-bordered">
+<thead>
+<tr align="center">
+<th><input type="checkbox"></th>
+<th>이미지</th>
+<th>사용자 파일명</th>
+<th>개발자 파일명</th>
+<th>API 파일명</th>
+</tr>
+</thead>
+<tbody>
+<cr:forEach var="fdata" items="${all}">
+<tr align="center">
+<th><img="http://localhost:8080/cdn/image/${fdata.API_FILE}" style="width:100px;"></th>
+<td>${fdata.FILE_BIN}</td>
+<td>${fdata.ORI_FILE}</td>
+<td><a href="${fdata.FILE_URL}">${fdata.NEW_FILE}</a></td>
+<td>${fdata.API_FILE}</td>
+</tr>
+</cr:forEach>
+</tbody>
+</table>
+<button type="button" class="btn btn-dark">선택삭제</button>
+</body>
+<script type="model">
+
+</script>
+</html>

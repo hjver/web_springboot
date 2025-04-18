@@ -1,0 +1,52 @@
+package kr.co.khj;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import jakarta.servlet.http.HttpSession;
+import kr.co.khj.aop.user_DTO;
+
+@Service
+public class cdn_service {
+
+	@Autowired
+	cdn_mapper mp;
+	
+	//AOP log insert
+	public int log_table(user_DTO dto) {
+		int result = this.mp.log_table(dto);
+		return result;
+	}
+	
+	public int cdn_insert(file_DTO dto) {
+		int result = this.mp.cdn_insert(dto);
+		return result;
+	}
+	
+	public List<file_DTO> all(Integer part,file_DTO dto){
+		Map<String, Object> map = new HashMap<>();
+		map.put("part", part);
+		if(part == 1) { //고유값으로
+			map.put("AIDX", dto.getAIDX());
+		}
+		else if(part == 3) { //검색어로 
+			map.put("word", dto.getWord());
+		}
+		List<file_DTO> result = this.mp.cdn_select(map);
+		return result;
+	}
+	
+	public List<file_DTO> cdn_image(String APINO){
+		List<file_DTO> result = this.mp.cdn_image(APINO);
+		return result;
+	}
+	
+	int cdn_delete(String AIDX) {
+		int result = this.mp.cdn_delete(AIDX);
+		return result;
+	}
+}

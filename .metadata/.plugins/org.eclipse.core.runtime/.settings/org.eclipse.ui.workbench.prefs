@@ -1,0 +1,12 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
+eclipse.preferences.version=1
+editors=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors>\r\n<descriptor class\="org.eclipse.ui.internal.genericeditor.ExtensionBasedTextEditor" id\="SpringBootPropertyEditor" image\="icons/spring_obj.gif" internal\="true" label\="Generic Editor - Spring Properties" openMode\="1" open_in_place\="false" plugin\="org.springframework.tooling.boot.ls"/>\r\n</editors>
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=248,248,248
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=248,248,248
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=248,248,248
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=248,248,248
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_END=248,248,248
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=248,248,248
+resourcetypes=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors version\="3.1">\r\n<info contentType\="org.eclipse.jdt.core.javaProperties">\r\n<editor id\="SpringBootPropertyEditor"/>\r\n</info>\r\n</editors>

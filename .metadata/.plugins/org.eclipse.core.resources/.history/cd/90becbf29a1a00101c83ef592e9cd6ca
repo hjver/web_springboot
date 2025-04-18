@@ -1,0 +1,10 @@
+package kr.co.khj;
+
+public class java_aop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package kr.co.khj.thymeleaf;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.Resource;
+
+@Aspect
+@Component
+public class thymeleaf_aop {
+	
+	@Resource(name="all_DTO")
+	all_DTO all_inject;
+
+	@Before("execution(* kr.co.khj.thymeleaf_controller.*(..))")
+	public void top_menu() {
+		
+	}
+	
+}

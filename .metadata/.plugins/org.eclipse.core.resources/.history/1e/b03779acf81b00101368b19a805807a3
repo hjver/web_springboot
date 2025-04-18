@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf 서브 페이지</title>
+<!-- replace : ~{}(경로) 가져올 원본 html :: fragment이름 
+replace => 기존 Tag를 삭제 후 Layout을 로드
+-->
+<style th:replace="~{sample.html :: styles}"></style>
+</head>
+<body>
+<div th:insert="~{sample.html :: top}">
+
+</div>
+<main>
+게시판 리스트 출력
+</main>
+<footer th:replace="~{sample.html :: copy}">
+
+</footer>
+</body>
+</html>

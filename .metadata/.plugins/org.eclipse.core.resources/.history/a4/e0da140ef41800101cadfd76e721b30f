@@ -1,0 +1,24 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Date today = new Date()
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bootstrap 회원가입 + Spring-boot</title>
+<link rel="stylesheet" href="./css/bootstrap.css?=v<%=today%>">
+<script src="./js/bootstrap.js"></script>
+</head>
+<body>
+<form id="frm" method="post" action="./join.do">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">아이디</span>
+  <input type="text" class="form-control width1" placeholder="아이디를 입력하세요."\>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+spring.application.name=kr.co.khj
+
+# Server
+server.port=8080
+server.servlet.encoding.force-response=true
+server.servlet.encoding.charset=UTF-8
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
+
+# 코드 수정시 자동으로 서버를 재실행 주는 옵션
+spring.devtools.restart.enabled=true
+
+# Session
+# 1초 = 1 1800 => 30분
+spring.session.timeout=1800
+server.servlet.session.timeout=1800
+
+# File I/O
+# 파일 첨부기능을 사용
+spring.servlet.multipart.enabled=true
+# 파일 한개의 최대 사이즈
+spring.servlet.multipart.max-file-size=100MB
+# 파일 여러개의 총 합계 사이즈
+spring.servlet.multipart.max-request-size=1000MB
+
+# View
+spring.mvc.view.prefix=/
+spring.mvc.view.suffix=.jsp
+
+# Mybatis
+mybatis.type-aliases-package=kr.co.khj
+mybatis.mapper-locations=classpath:/*/*.xml
+
+# Oracle 18c
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/xepdb1
+spring.datasource.username=NANKIM
+spring.datasource.password=a123456
+
+#Mysql
+spring.datasource.hikari.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.hikari.jdbc-url=jdbc:mysql://localhost:3306/mrp
+spring.datasource.hikari.username=project
+spring.datasource.hikari.password=a123456
+
+# MyBatis 실행 환경 및 SQL 오류 추적을 위한 설정
+mybatis.configuration.cache-enabled=false
+mybatis.configuration.use-generated-keys=false
+mybatis.configuration.default-executor-type=REUSE
+mybatis.configuration.jdbc-type-for-null=NULL
+mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 전체 로그 레벨 설정 (INFO 이상 출력)
+logging.level.root=INFO
+
+# 콘솔 출력 포맷 지정 (옵션)
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n

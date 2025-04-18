@@ -1,0 +1,42 @@
+spring.application.name=kr.co.khj
+
+#Server
+server.port=8080
+server.servlet.encoding.force-response=true
+server.servlet.encoding.charset=UTF-8
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
+
+#코드 수정시 자동으로 서버 재실행해주는  옵션
+spring.devtools.restart.enabled=true
+
+#Session
+#1초 == 1
+spring.session.timeout=3600
+server.servlet.session.timeout=3600
+
+#File I/O
+#파일 첨부기능 사용
+spring.servlet.multipart.enabled=true
+#파일 한개 최대 사이즈
+spring.servlet.multipart.max-file-size=100MB
+#파일 총합계 사이즈
+spring.servlet.multipart.max-request-size=1000MB
+
+#View
+spring.mvc.view.prefix=/
+spring.mvc.view.suffix=.jsp
+
+#Mybatis
+mybatis.type-aliases-package=kr.co.khj
+mybatis.mapper-locations=classpath:/mapper/mapper.xml
+
+#Oracle 18c
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/xepdb1
+spring.datasource.username=NANKIM
+spring.datasource.password=a123456
+
+
+
+

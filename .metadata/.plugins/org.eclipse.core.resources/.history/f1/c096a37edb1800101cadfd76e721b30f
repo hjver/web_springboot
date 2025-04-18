@@ -1,0 +1,13 @@
+package kr.co.khj;
+
+import java.util.List;
+
+public class membership_dao implements membership_service {
+
+	@Override
+	public List<membership_dto> alldata() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

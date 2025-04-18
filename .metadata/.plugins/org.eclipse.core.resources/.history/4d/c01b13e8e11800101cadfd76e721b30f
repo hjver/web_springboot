@@ -1,0 +1,18 @@
+package kr.co.khj;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class membership_service2 {
+
+	@Autowired
+	private mapper mp;
+	
+	List<membership_dto> onedata(String MID){
+		List<membership_dto> one = this.mp.onedata(MID);
+		return one;
+	}
+}

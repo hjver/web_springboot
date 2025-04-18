@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--  -->
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{index.html :: head}"></head>
+<body>
+<header th:replace="~{index.html :: top}"></header>
+<form id="frm" method="get" action="./search_shop.do" onsubmit="return checks()">
+<nav th:replace="~{index.html :: manu}"></nav>
+</form>
+<section th:replace="~{index.html :: banner}"></section>
+<article th:replace="~{index.html :: product}"></article>
+<footer th:replace="~{index.html :: footer}"></footer>
+</body>
+<script>
+function checks(){
+	if(frm.q.value==""){
+		alert("검색어를 입력하셔야 합니다.");
+		return false;
+	}
+	else{
+		frm.submit();
+	}
+}
+</script>
+</html>

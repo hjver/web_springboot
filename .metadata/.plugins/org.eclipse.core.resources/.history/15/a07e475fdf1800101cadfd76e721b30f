@@ -1,0 +1,20 @@
+package kr.co.khj;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class membership_dao implements membership_service {
+
+	@Autowired
+	private mapper mp;
+	
+	@Override
+	public List<membership_dto> alldata() {
+		List<membership_dto> all = this.mp.alldata();
+		return all;
+	}
+
+}

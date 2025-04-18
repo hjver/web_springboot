@@ -1,0 +1,23 @@
+package kr.co.khj;
+
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPClientConfig;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
+
+@Repository("cdn_model")
+public class cdn_model {
+	//FTP 정보를 외부에서 수정되지 않도록 설정
+	final String user = "testuser";
+	final String pass = "a1004a1004!";
+	final int port = 21;
+	
+	FTPClient fc = null;
+	FTPClientConfig fcc = null;
+	
+	//CDN Server로 해당 파이을 전송하는 역할을 담당한 model
+	public boolean cdn_ftp(MultipartFile files) {
+		
+		return false;
+	}
+}

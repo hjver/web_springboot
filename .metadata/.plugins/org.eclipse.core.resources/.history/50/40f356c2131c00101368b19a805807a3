@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{index.html :: head}">
+</head>
+<body>
+<header th:insert="~{index.html :: top}"></header>
+</body>
+</html>

@@ -1,0 +1,14 @@
+spring.application.name=kr.co.khj
+
+
+#View
+spring.mvc.view.prefix==/
+spring.mvc.vie.suffix=.jsp
+
+#Mybatis
+mybatis.type-aliases-package=kr.co.khj
+mybatis.mapper-locations==classpath:/mapper/mapper.xml
+
+#Oracle
+
+
